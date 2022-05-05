@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+env:
+  SSH_INTEGRATION_SEMANTIC: ${{ secrets.SSH_INTEGRATION_SEMANTIC }}
+
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - name: Run Unit Tests
+        run: |
+          echo ${{ env.SSH_INTEGRATION_SEMANTIC }}
