@@ -29,3 +29,4 @@ jobs:
           echo $TEST_KEY
           echo ${{ secrets.SSH_KEY_NEW }}
           export SSH_K='${{ secrets.SSH_KEY_NEW }}'
+          echo $SSH_K
