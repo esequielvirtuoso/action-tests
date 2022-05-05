@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  SSH_INTEGRATION_SEMANTIC: ${{ secrets.SSH_INTEGRATION_SEMANTIC }}
+  ANY_SECRET: ${{ secrets.ANY_SECRET }}
 
 
 jobs:
@@ -20,4 +20,6 @@ jobs:
       - uses: actions/setup-go@v3
       - name: Run Unit Tests
         run: |
-          echo ${{ env.SSH_INTEGRATION_SEMANTIC }}
+          echo ${{ secrets.ANY_SECRET }}
+          echo ${{ env.ANY_SECRET }}
+          echo ${{ env.TEST_ENV }}
