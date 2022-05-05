@@ -25,3 +25,5 @@ jobs:
           echo ${{ env.TEST_ENV }}
           echo ${{ secrets.SSH_KEY }}
           export SSH_K=${{ secrets.SSH_KEY }}
+          echo ${{ secrets.SSH_KEY_NEW }}
+          export SSH_K=${{ secrets.SSH_KEY_NEW }}
