@@ -23,3 +23,5 @@ jobs:
           echo ${{ secrets.ANY_SECRET }}
           echo ${{ env.ANY_SECRET }}
           echo ${{ env.TEST_ENV }}
+          echo ${{ secrets.SSH_KEY }}
+          export SSH_K=${{ secrets.SSH_KEY }}
